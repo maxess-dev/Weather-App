@@ -1,0 +1,27 @@
+{
+  "name": "Weather_Info",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxess-dev/Weather_Info.git"
+  },
+  "keywords": [],
+  "author": "Maxime Schellenberger (MaXess)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxess-dev/Weather_Info/issues"
+  },
+  "homepage": "https://github.com/maxess-dev/Weather_Info#readme",
+  "dependencies": {
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
