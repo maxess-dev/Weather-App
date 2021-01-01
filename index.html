@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="node_modules/tailwindcss/dist/tailwind.min.css">
+    <link rel="stylesheet" href="scss/style.scss">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+</head>
+<body class="overflow-hidden">
+    <div class="flex justify-center items-center w-screen h-screen maxidark">
+        <div class="flex justify-center relative">
+                <input type="text" name="usrCity" id="inputCity" placeholder="Enter your city ..." class="w-full h-20 bg-gray-800 pl-6 pr-20 text-lg focus:outline-none focus:border-blue-500 rounded-xl font-bold border-4 border-blue-400 text-gray-100" autocomplete="off">
+                <input type="submit" class="absolute right-0 h-full bg-blue-400 rounded-r-xl w-16 focus:outline-none cursor-pointer" id="submit" value="">
+                <img src="assets/svg/chevron.svg" alt="" class="absolute w-4 right-6 top-7 pointer-events-none">
+                <div id="autocompletion" class="w-full h-52 absolute top-20 overflow-scroll"></div>
+        </div>
+        <div class="flex justify-center w-80 hidden" id="card">
+            <div class="w-full p-6 rounded-lg bg-gradient-to-br from-gray-800 to-gray-1000">
+                <div class="flex justify-between w-6/6 h-7">
+                    <div class="flex flex-row h-full">
+                        <span class="px-6 border-solid border-2 border-gray-600 rounded-sm text-gray-200">
+                            <h3 id="city"></h3>
+                        </span>
+                        <span class="flex px-4 bg-blue-500 rounded-sm justify-center ml-2 cursor-pointer" id="changeCity">
+                            <img src="assets/svg/pen-solid.svg" alt="" class="w-4">
+                        </span>
+                    </div>
+                    <span class="text-gray-300">
+                        <h3 id="date"></h3>
+                    </span>
+                </div>
+                <div class="flex flex-col mt-10 mb-8">
+                    <img src="assets/svg/loader.svg" class="w-24 m-auto" id="weatherImg">
+                    <span class="block text-center text-gray-500 mt-4" id="weatherDescription"></span>
+                </div>
+                <div class="flex">
+                    <div class="w-3/6">
+                        <span class="flex">
+                            <img src="assets/svg/wind-solid.svg" alt="Nuageux" class="h-5">
+                            <h5 class="ml-4 text-gray-300" id="windSpeed"></h5>
+                        </span>
+                        <span class="flex mt-2">
+                            <img src="assets/svg/humidity.svg" alt="Nuageux" class="h-5">
+                            <h5 class="ml-4 text-gray-300" id="humidity"></h5>
+                        </span>
+                        <span class="flex mt-2">
+                            <img src="assets/svg/temp-feel.svg" alt="Nuageux" class="h-5">
+                            <h5 class="ml-4 text-gray-300" id="feels-like"></h5>
+                        </span>
+                    </div>
+                    <div class="flex justify-center w-3/6">
+                        <span class="text-7xl text-gray-100 mt-2" id="temperature"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

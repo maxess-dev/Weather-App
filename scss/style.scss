@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.maxidark{
+    background-color: #030303;
+}
+
+@keyframes rotaInfinite{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scaleInfinite{
+    0%{
+        transform: scale(1)
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes opaAnim{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.scale{
+    animation: scaleInfinite 4s ease infinite;
+}
+
+.turn{
+    animation: rotaInfinite 9s linear infinite;
+}
+
+.opaAnim{
+    animation: opaAnim 1s ease;
+}
