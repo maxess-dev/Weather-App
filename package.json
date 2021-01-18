@@ -2,9 +2,9 @@
   "name": "Weather_Info",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./js/index.js",
   "scripts": {
-    "run": "parcel index.html",
+    "start": "parcel index.html",
     "build": "parcel build index.html"
   },
   "repository": {

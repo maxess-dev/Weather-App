@@ -60,7 +60,6 @@ function fetchAPI(){
             response.status);
           return;
         } response.json().then(function(data) {
-            console.log(data);
             city.textContent = data.name;
             weatherDescription.textContent = data.weather[0].description.slice(0,1).toUpperCase() + data.weather[0].description.slice(1);
             windSpeed.textContent = data.wind.speed + " m/s";
@@ -132,12 +131,10 @@ function removeSPAN(parent){
   for (let i = 0; i < parent.children.length; i++) {
     parent.removeChild(parent.children[i]);
   }
-  console.log("removed all span");
 }
 
 // Autocomplete ON
 inputCity.addEventListener("keyup", function(event){
-  console.log("-----------");
   autoCompletion.classList.remove("hidden");
   const inputRealTime = event.target.value;
   const regex = new RegExp(`^${inputRealTime}`,"i");
@@ -147,7 +144,6 @@ inputCity.addEventListener("keyup", function(event){
   if(inputRealTime.length >= 3){
     cityJSON.forEach(el => {
       if(regex.test(el.city)){
-        console.log(el);
         span = document.createElement("span");
         addClasses(span,["block","bg-gray-300","px-6","py-2","w-full","mt-2","opaAnim","rounded-sm","cursor-pointer"]);
         span.textContent = el.city;
